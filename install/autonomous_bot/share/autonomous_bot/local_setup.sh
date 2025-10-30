@@ -1,0 +1,1 @@
+/home/mahmudul/virtual_bot_ws/build/autonomous_bot/ament_cmake_environment_hooks/local_setup.sh
