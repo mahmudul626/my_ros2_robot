@@ -7,7 +7,7 @@ Currently, the robot supports **teleoperation control**, with future updates pla
 
 ## 🧠 Overview
 
-This workspace (`virtual_bot_ws`) is being developed to simulate an autonomous robot using ROS2 and Gazebo.  
+This workspace (`buddy_bot`) is being developed to simulate an autonomous robot using ROS2 and Gazebo.  
 It provides a foundation for testing robot models, control systems, and mapping algorithms in a simulated environment.
 
 **Current Capabilities:**
@@ -27,7 +27,7 @@ It provides a foundation for testing robot models, control systems, and mapping 
 
 ```
 
-virtual_bot_ws/
+buddy_bot/
 ├── src/
 │   └── autonomous_bot/
 │       ├── config/           # Config files (RViz, SLAM params)
@@ -69,8 +69,8 @@ Clone this repository and build the workspace:
 
 ```bash
 # Clone the repository
-git clone https://github.com/mahmudul626/my_ros2_robot.git ~/virtual_bot_ws
-cd ~/virtual_bot_ws
+git clone https://github.com/mahmudul626/buddy_bot.git
+cd ~/buddy_bot
 
 # Build the workspace
 colcon build
