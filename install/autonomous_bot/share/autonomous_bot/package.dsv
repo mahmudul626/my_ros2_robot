@@ -1,1 +1,8 @@
-/home/mahmudul/virtual_bot_ws/build/autonomous_bot/ament_cmake_environment_hooks/package.dsv
+source;share/autonomous_bot/hook/cmake_prefix_path.ps1
+source;share/autonomous_bot/hook/cmake_prefix_path.dsv
+source;share/autonomous_bot/hook/cmake_prefix_path.sh
+source;share/autonomous_bot/local_setup.bash
+source;share/autonomous_bot/local_setup.dsv
+source;share/autonomous_bot/local_setup.ps1
+source;share/autonomous_bot/local_setup.sh
+source;share/autonomous_bot/local_setup.zsh
