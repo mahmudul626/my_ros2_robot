@@ -85,8 +85,18 @@ source install/setup.bash
 
 Launch the virtual robot in Gazebo:
 
+Terminal 1
 ```bash
-ros2 launch autonomous_bot simulation.launch.py
+gazebo ~/buddy_bot/src/autonomous_bot/worlds/test_world.world   -slibgazebo_ros_init.so -slibgazebo_ros_factory.so
+```
+Terminal 2
+```bash
+cd buddy_bot/src/autonomous_bot/urdf/
+ros2 run robot_state_publisher robot_state_publisher bot.urdf
+```
+Terminal 3
+```bash
+ros2 run gazebo_ros spawn_entity.py -topic robot_description -entity autonomous_bot
 ```
 
 Then, control it via teleop:
@@ -98,7 +108,7 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 (Optional) Visualize the simulation in RViz:
 
 ```bash
-ros2 launch autonomous_bot mapping.launch.py
+rviz2
 ```
 
 ---
@@ -117,7 +127,7 @@ Planned improvements and research directions:
 
 ## 🧑‍💻 Author
 
-**Mahmudul Hasan**
+**Md. Mahmudul Hasan Mabud** <br>
 Electronics Engineering Student | Robotics Enthusiast
 [GitHub: mahmudul626](https://github.com/mahmudul626)
 
