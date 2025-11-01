@@ -1,0 +1,15 @@
+slam_toolbox:
+  ros__parameters:
+    solver_plugin: "solver_plugins::CeresSolver"
+    odom_frame: "odom"
+    map_frame: "map"
+    base_frame: "base_link"
+    scan_topic: "/scan"
+    use_scan_matching: true
+    ceres_linear_solver: "sparse_normal_cholesky"
+    ceres_preconditioner: "schur_jacobi"
+    ceres_trust_region_strategy: "levenberg_marquardt"
+    ceres_dogleg_type: "traditional_dogleg"
+    ceres_loss_function: "huber"
+    # Set to true for virtual simulation
+    use_sim_time: True

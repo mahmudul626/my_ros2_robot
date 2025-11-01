@@ -1,0 +1,139 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <include>
+      [cite_start]<uri>model://ground_plane</uri> [cite: 1]
+    </include>
+    <include>
+      [cite_start]<uri>model://sun</uri> [cite: 1]
+    </include>
+    
+    <model name='building'>
+      <pose>0 0 0 0 0 0</pose>
+      <static>true</static>
+      <link name='walls'>
+        [cite_start]<collision name='wall_1_collision'> [cite: 1]
+          <pose>-5 0 0.5 0 0 1.5707</pose>
+       
+           [cite_start]<geometry><box><size>10 0.2 1</size></box></geometry> [cite: 2]
+        </collision>
+        <visual name='wall_1_visual'>
+          <pose>-5 0 0.5 0 0 1.5707</pose>
+          [cite_start]<geometry><box><size>10 0.2 1</size></box></geometry> [cite: 2]
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+           
+              [cite_start]<name>Gazebo/Bricks</name> [cite: 3]
+            </script>
+          </material>
+        </visual>
+        
+        <collision name='wall_2_collision'>
+          <pose>5 0 0.5 0 0 1.5707</pose>
+          [cite_start]<geometry><box><size>10 0.2 1</size></box></geometry> [cite: 2]
+        </collision>
+        <visual name='wall_2_visual'>
+    
+          [cite_start]<pose>5 0 0.5 0 0 1.5707</pose> [cite: 4]
+          [cite_start]<geometry><box><size>10 0.2 1</size></box></geometry> [cite: 3]
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Bricks</name>
+            </script>
+          </material>
+   
+         [cite_start]</visual> [cite: 5]
+
+        <collision name='wall_3_collision'>
+          <pose>0 5 0.5 0 0 0</pose>
+          [cite_start]<geometry><box><size>10 0.2 1</size></box></geometry> [cite: 3]
+        </collision>
+        <visual name='wall_3_visual'>
+          <pose>0 5 0.5 0 0 0</pose>
+          [cite_start]<geometry><box><size>10 0.2 1</size></box></geometry> [cite: 4]
+          <material>
+ 
+            [cite_start]<script> [cite: 6]
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Bricks</name>
+            </script>
+          </material>
+        </visual>
+
+        <collision name='wall_4_collision'>
+          <pose>0 -5 0.5 0 0 0</pose>
+       
+           [cite_start]<geometry><box><size>10 0.2 1</size></box></geometry> [cite: 7]
+        </collision>
+        <visual name='wall_4_visual'>
+          <pose>0 -5 0.5 0 0 0</pose>
+          [cite_start]<geometry><box><size>10 0.2 1</size></box></geometry> [cite: 5]
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+           
+               [cite_start]<name>Gazebo/Bricks</name> [cite: 8]
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name='grass_floor'>
+      <static>true</static>
+      <pose>0 0 0.01 0 0 0</pose>
+      <link name='grass_link'>
+        <collision name='grass_collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>10 10</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name='grass_visual'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>10 10</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grass</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name='tree_1'>
+      <static>true</static>
+      <pose>2 2 0 0 0 0</pose>
+      <include>
+        <uri>model://oak_tree</uri>
+      </include>
+    </model>
+
+    <model name='broken_table_1'>
+      
+      [cite_start]<static>true</static> [cite: 9]
+      <pose>-2 -2 0 0.4 0 0.8</pose> 
+      <include>
+        <uri>model://table</uri>
+      </include>
+    </model>
+
+    <model name='debris_pile_1'>
+      <static>true</static>
+      <pose>3 -1 0 0 0 0.2</pose>
+      <include>
+        <uri>model://debris</uri>
+      </include>
+    </model>
+
+  </world>
+</sdf>
